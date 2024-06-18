@@ -1,4 +1,4 @@
-package umc.spring.service;
+package umc.spring.service.temp;
 
 public interface TempQueryService {
     void checkFlag(Integer flag);
