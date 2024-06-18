@@ -1,6 +1,5 @@
-package umc.spring.service;
+package umc.spring.service.temp;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import umc.spring.apiPayload.code.status.ErrorStatus;
 import umc.spring.apiPayload.exception.handler.TempHandler;

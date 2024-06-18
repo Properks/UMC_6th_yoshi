@@ -1,6 +1,8 @@
 package umc.spring.domain;
 
 import lombok.*;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 import umc.spring.domain.common.BaseEntity;
 
 import javax.persistence.*;
@@ -9,6 +11,8 @@ import java.util.List;
 
 @Entity
 @Builder
+@DynamicInsert
+@DynamicUpdate
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Getter
@@ -32,4 +36,12 @@ public class Store extends BaseEntity {
 
     @OneToMany(mappedBy = "store")
     private List<Review> reviewList = new ArrayList<>();
+
+    public void setRegion(Region region) {
+        this.region = region;
+    }
+
+    public void updateScore(Float score) {
+        this.score = score;
+    }
 }
