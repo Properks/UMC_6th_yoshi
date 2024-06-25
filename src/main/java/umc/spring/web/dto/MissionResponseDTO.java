@@ -6,26 +6,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
-public class ReviewResponseDTO {
-
-    @Getter
-    @Builder
-    @NoArgsConstructor
-    @AllArgsConstructor
-    public static class JoinResultDTO {
-        private Long id;
-        private LocalDateTime createdAt;
-    }
+public class MissionResponseDTO {
 
     @Builder
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class ReviewPreViewListDTO{
-        List<ReviewPreViewDTO> reviewList;
+    public static class MissionPreViewListDTO {
+        List<MissionPreViewDTO> missionList;
         Integer listSize;
         Integer totalPage;
         Long totalElements;
@@ -37,10 +27,10 @@ public class ReviewResponseDTO {
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class ReviewPreViewDTO{
-        String ownerNickname;
-        Float score;
-        String body;
+    public static class MissionPreViewDTO{
+        Integer reward;
+        String missionSpec;
+        LocalDate deadLine;
         LocalDate createdAt;
     }
 }
